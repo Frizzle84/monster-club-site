@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Monster Club Supply Co.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+}
+
+h1{
+    font-family:'Anton',sans-serif;
+    font-size:5rem;
+    line-height:.95;
+    margin:0;
+    color:#ff6a00;
+
+    text-shadow:
+      0 0 2px #ff6a00,
+      0 0 6px rgba(255, 106, 0, 0.35);
+}
+
+.tagline{
+    margin-top:20px;
+    font-size:1.2rem;
+    letter-spacing:2px;
+    color:#9dff00;
+}
+
+.button{
+    margin-top:40px;
+    padding:15px 30px;
+    border:2px solid #ff6a00;
+    color:white;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#ff6a00;
+    color:black;
+}
+
+.podcast-links{
+    margin-top:25px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.podcast-links a{
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:2px;
+    transition:0.2s;
+}
+
+.spotify{
+    color:#ff6a00;
+}
+
+.apple{
+    color:#9dff00;
+}
+
+.podcast-links a:hover{
+    opacity:0.7;
+}
+
+.section{
+    padding:100px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section h2{
+    font-family:'Anton',sans-serif;
+    font-size:3rem;
+    color:#ff6a00;
+    margin-bottom:40px;
+}
+
+.monster-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #222;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#9dff00;
+}
+
+.card h3{
+    color:#9dff00;
+    margin-top:0;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:15px;
+    color:#ff6a00;
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    border-top:1px solid #222;
+    color:#777;
+}
+
+@media(max-width:768px){
+
+h1{
+    font-size:3rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>
+MONSTER CLUB<br>
+SUPPLY CO.
+</h1>
+
+<div class="tagline">
+SUPPLIES FOR THE STRANGE SINCE 1986
+</div>
+
+<a href="#archive" class="button">
+JOIN THE CLUB
+</a>
+
+<div class="podcast-links">
+
+<a class="spotify"
+href="https://open.spotify.com/show/1SEI8DrQvsyJnQnbUpvCto?si=4b3da63db0144052"
+target="_blank">
+LISTEN ON SPOTIFY
+</a>
+
+<a class="apple"
+href="https://podcasts.apple.com/us/podcast/the-monster-club-supply-co-podcast/id1896632263"
+target="_blank">
+APPLE PODCASTS
+</a>
+
+</div>
+
+</section>
+
+<section class="section" id="archive">
+
+<h2>EPISODE ARCHIVE</h2>
+
+<div class="monster-grid">
+
+<div class="card">
+<h3>Dead Air Radio</h3>
+<p>
+A midnight broadcast proves some signals are never truly empty.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>Tally Green Swamp Monster</h3>
+<p>
+Two siblings venture deep into a swamp where something still waits in the dark.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Visitors From the Sky</h3>
+<p>
+A metallic craft lands near Blackridge — but the visitors never actually leave.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Creature of Willow Point</h3>
+<p>
+Strange knocks echo from the woods until something answers back.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>Monster Case File: Frizzle</h3>
+<p>
+Walter’s first monster encounter sparks the creation of Monster Club.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>Static Channel 13</h3>
+<p>
+A forgotten television signal slowly lets something into our world.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Red Eyes of Forest Brook</h3>
+<p>
+A winged figure with glowing red eyes appears before disaster strikes.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Well</h3>
+<p>
+A hidden tunnel beneath an old house leads to something buried alive.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Creep Cruiser</h3>
+<p>
+A ghostly BMX bike appears at night — and kids who follow it disappear.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Whoops in the Hollow</h3>
+<p>
+Bigfoot calls echo through the woods after two friends answer back.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Shadow of Black Water Lake</h3>
+<p>
+A quiet lake hides a terrifying secret beneath its dark surface.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Full Moon Creature</h3>
+<p>
+Walter witnesses a horrifying transformation under the Roswell moon.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Haunted School Bus</h3>
+<p>
+A final ride home from school turns into something far more sinister.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Haunted Telephone</h3>
+<p>
+Phone calls from inside the house lure a boy toward an impossible visitor.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>Monster Case File #2: Flatwoods Monster</h3>
+<p>
+Walter and Frizzle investigate a legendary creature deep in the swamp.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Ice Cream Man</h3>
+<p>
+A mysterious truck returns with a menu no child should ever order from.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+<div class="card">
+<h3>The Monster of Sea Pines</h3>
+<p>
+A marsh-dwelling creature resurfaces after decades of disappearances.
+</p>
+<a href="#">OPEN FILE →</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+Monster Club Supply Co. © 2026
+</footer>
+
+</body>
+</html>
