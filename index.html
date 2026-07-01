@@ -23,14 +23,13 @@ body{
     position:relative;
     height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
     overflow:hidden;
 
     background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.88)),
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.82)),
     url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
 
     background-size:cover;
@@ -40,18 +39,18 @@ body{
 .hero::after{
     content:'';
     position:absolute;
-    bottom:0;
     left:0;
+    bottom:0;
     width:100%;
-    height:260px;
+    height:320px;
 
-    background:
-    linear-gradient(to top, #050505 5%, transparent),
-    url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1800&auto=format&fit=crop');
+    background:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1800&auto=format&fit=crop');
 
     background-size:cover;
     background-position:center bottom;
-    opacity:.45;
+    background-repeat:no-repeat;
+
+    opacity:.9;
     z-index:1;
 }
 
@@ -70,7 +69,7 @@ h1{
 
     text-shadow:
       0 0 2px #ff6a00,
-      0 0 6px rgba(255, 106, 0, 0.35);
+      0 0 6px rgba(255,106,0,.35);
 }
 
 .tagline{
@@ -81,6 +80,7 @@ h1{
 }
 
 .button{
+    display:inline-block;
     margin-top:40px;
     padding:15px 30px;
     border:2px solid #ff6a00;
@@ -89,7 +89,6 @@ h1{
     text-transform:uppercase;
     letter-spacing:3px;
     transition:.3s;
-    display:inline-block;
 }
 
 .button:hover{
@@ -109,7 +108,7 @@ h1{
     text-decoration:none;
     font-size:14px;
     letter-spacing:2px;
-    transition:0.2s;
+    transition:.2s;
 }
 
 .spotify{
@@ -121,7 +120,7 @@ h1{
 }
 
 .podcast-links a:hover{
-    opacity:0.7;
+    opacity:.7;
 }
 
 .section{
