@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -39,12 +40,15 @@ body {
    ========================= */
 
 .hero {
+
     min-height: 100vh;
+
     position: relative;
     overflow: hidden;
 
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
 
@@ -55,6 +59,7 @@ body {
             rgba(0,0,0,.42),
             rgba(0,0,0,.76)
         ),
+
         url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=85&w=2000");
 
     background-size: cover;
@@ -62,9 +67,12 @@ body {
     background-repeat: no-repeat;
 }
 
+
 .hero-overlay {
+
     position: absolute;
     inset: 0;
+
     z-index: 1;
 
     background:
@@ -77,7 +85,9 @@ body {
         );
 }
 
+
 .hero-content {
+
     position: relative;
     z-index: 2;
 
@@ -94,38 +104,46 @@ body {
    ========================= */
 
 h1 {
+
     font-family: 'Anton', Impact, sans-serif;
+
     font-size: clamp(4rem,8vw,7.4rem);
-    line-height: .92;
+
+    line-height: .98;
 
     margin: 0;
 
     color: #ff6a00;
 
+    letter-spacing: 5px;
+
+    -webkit-text-stroke: 2px #050505;
+
+    paint-order: stroke fill;
+
     text-shadow:
-        0 0 2px #ff6a00,
-        0 0 10px rgba(255,106,0,.28),
-        0 5px 25px rgba(0,0,0,.9);
+        0 3px 12px rgba(0,0,0,.8);
 }
 
 
-/* PURPLE SMALLER SUPPLY CO. */
-
 .supply-co {
+
     display: inline-block;
 
-    margin-top: 10px;
+    margin-top: 12px;
 
     font-size: .56em;
 
-    color: #8f35d1;
+    color: #7b2cbf;
 
-    letter-spacing: 2px;
+    letter-spacing: 7px;
+
+    -webkit-text-stroke: 1.5px #050505;
+
+    paint-order: stroke fill;
 
     text-shadow:
-        0 0 2px #8f35d1,
-        0 0 10px rgba(143,53,209,.35),
-        0 5px 25px rgba(0,0,0,.9);
+        0 3px 12px rgba(0,0,0,.8);
 }
 
 
@@ -134,11 +152,14 @@ h1 {
    ========================= */
 
 .tagline {
+
     margin-top: 20px;
+
+    font-family: 'Anton', Impact, sans-serif;
 
     font-size: clamp(.9rem,2vw,1.2rem);
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 
     color: #9dff00;
 
@@ -147,55 +168,83 @@ h1 {
 
 
 /* =========================
-   BUTTONS
+   HERO BUTTONS
    ========================= */
 
 .hero-actions {
-    margin-top: 40px;
 
     display: flex;
 
-    gap: 14px;
-
     justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 40px;
 
     flex-wrap: wrap;
 }
 
-.button {
-    padding: 15px 30px;
 
-    border: 2px solid #ff6a00;
+.hero-actions .button {
 
-    color: white;
+    width: 220px;
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    border: 3px solid #7b2cbf;
+
+    border-radius: 6px;
+
+    font-family: 'Anton', Impact, sans-serif;
+
+    font-size: 16px;
+
+    letter-spacing: 3px;
 
     text-decoration: none;
 
     text-transform: uppercase;
 
-    letter-spacing: 3px;
-
-    transition: .3s;
-
-    background: rgba(0,0,0,.25);
-}
-
-.button:hover {
-    background: #ff6a00;
-    color: black;
+    transition: all .2s ease;
 }
 
 
-/* SHOP BUTTON */
+/* JOIN THE CLUB */
 
-.shop-button {
-    border-color: #9dff00;
-    color: #9dff00;
-}
+.hero-actions .join-button {
 
-.shop-button:hover {
     background: #9dff00;
+
     color: #050505;
+}
+
+
+/* SHOP */
+
+.hero-actions .shop-button {
+
+    background: rgba(0,0,0,.72);
+
+    color: #ff6a00;
+}
+
+
+/* BUTTON HOVER */
+
+.hero-actions .button:hover {
+
+    background: #7b2cbf;
+
+    color: white;
+
+    transform: translateY(-2px);
 }
 
 
@@ -204,6 +253,7 @@ h1 {
    ========================= */
 
 .podcast-links {
+
     margin-top: 25px;
 
     display: flex;
@@ -215,7 +265,11 @@ h1 {
     justify-content: center;
 }
 
+
 .podcast-links a {
+
+    font-family: 'Anton', Impact, sans-serif;
+
     text-decoration: none;
 
     font-size: 14px;
@@ -227,13 +281,16 @@ h1 {
     text-shadow: 0 2px 8px #000;
 }
 
+
 .spotify {
     color: #ff6a00;
 }
 
+
 .apple {
     color: #9dff00;
 }
+
 
 .podcast-links a:hover {
     opacity: .7;
@@ -245,6 +302,7 @@ h1 {
    ========================= */
 
 .section {
+
     padding: 100px 20px;
 
     max-width: 1100px;
@@ -252,17 +310,23 @@ h1 {
     margin: auto;
 }
 
+
 .section h2 {
+
     font-family: 'Anton', Impact, sans-serif;
 
     font-size: 3rem;
 
     color: #ff6a00;
 
+    letter-spacing: 2px;
+
     margin-bottom: 40px;
 }
 
+
 .monster-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -271,7 +335,9 @@ h1 {
     gap: 20px;
 }
 
+
 .card {
+
     background: #111;
 
     border: 1px solid #222;
@@ -281,23 +347,34 @@ h1 {
     transition: .3s;
 }
 
+
 .card:hover {
+
     transform: translateY(-5px);
 
     border-color: #9dff00;
 }
 
+
 .card h3 {
+
+    font-family: 'Anton', Impact, sans-serif;
+
     color: #9dff00;
+
+    letter-spacing: 1px;
 
     margin-top: 0;
 }
+
 
 .card p {
     line-height: 1.6;
 }
 
+
 .card a {
+
     display: inline-block;
 
     margin-top: 15px;
@@ -313,10 +390,11 @@ h1 {
 
 
 /* =========================
-   JOIN THE CLUB
+   JOIN THE CLUB SECTION
    ========================= */
 
 .join {
+
     background:
         radial-gradient(
             circle at top left,
@@ -328,7 +406,9 @@ h1 {
     padding: 90px 20px;
 }
 
+
 .join-wrap {
+
     max-width: 1100px;
 
     margin: 0 auto;
@@ -344,11 +424,16 @@ h1 {
     align-items: center;
 }
 
+
 .join-inner {
     text-align: left;
 }
 
+
 .join-kicker {
+
+    font-family: 'Anton', Impact, sans-serif;
+
     color: #9dff00;
 
     font-size: 12px;
@@ -362,12 +447,16 @@ h1 {
     margin-bottom: 12px;
 }
 
+
 .join h2 {
+
     font-family: 'Anton', Impact, sans-serif;
 
     font-size: clamp(3.6rem,8vw,6rem);
 
     line-height: .95;
+
+    letter-spacing: 3px;
 
     margin: 0;
 
@@ -376,7 +465,9 @@ h1 {
     text-transform: uppercase;
 }
 
+
 .join p {
+
     max-width: 590px;
 
     margin: 22px 0 32px;
@@ -388,10 +479,11 @@ h1 {
 
 
 /* =========================
-   EMAIL SIGNUP
+   EMAIL FORM
    ========================= */
 
 .signup-form {
+
     display: flex;
 
     max-width: 560px;
@@ -399,7 +491,9 @@ h1 {
     margin: 0;
 }
 
+
 .signup-form input {
+
     flex: 1;
 
     min-width: 0;
@@ -415,7 +509,9 @@ h1 {
     font-size: 14px;
 }
 
+
 .signup-form button {
+
     border: 0;
 
     background: #9dff00;
@@ -424,22 +520,25 @@ h1 {
 
     padding: 0 25px;
 
-    font-family: inherit;
+    font-family: 'Anton', Impact, sans-serif;
 
-    font-weight: 600;
+    font-weight: 400;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 
     text-transform: uppercase;
 
     cursor: pointer;
 }
 
+
 .signup-form button:hover {
     opacity: .88;
 }
 
+
 .join-note {
+
     margin-top: 15px;
 
     color: rgba(255,255,255,.65);
@@ -453,33 +552,11 @@ h1 {
 
 
 /* =========================
-   JOIN LOGO
-   ========================= */
-
-.join-art {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-.join-art img {
-    display: block;
-
-    width: 100%;
-
-    max-width: 430px;
-
-    height: auto;
-}
-
-
-/* =========================
    FOOTER
    ========================= */
 
 footer {
+
     text-align: center;
 
     padding: 50px 20px;
@@ -497,40 +574,62 @@ footer {
 @media(max-width:768px) {
 
     h1 {
-        font-size: clamp(3.2rem,15vw,5rem);
+
+        font-size: clamp(3.2rem, 15vw, 5rem);
+
+        letter-spacing: 3px;
+
+        -webkit-text-stroke: 1.5px #050505;
     }
+
 
     .supply-co {
-        font-size: .58em;
+
+        letter-spacing: 5px;
+
+        -webkit-text-stroke: 1px #050505;
     }
+
 
     .hero-actions {
+
         flex-direction: column;
 
-        width: min(100%,320px);
+        width: 100%;
     }
+
 
     .hero-actions .button {
-        display: block;
+
+        width: 220px;
+
+        height: 58px;
     }
 
+
     .join-wrap {
+
         grid-template-columns: 1fr;
 
         gap: 40px;
     }
 
+
     .join-inner {
         text-align: center;
     }
 
+
     .join p {
+
         margin-left: auto;
 
         margin-right: auto;
     }
 
+
     .signup-form {
+
         flex-direction: column;
 
         gap: 8px;
@@ -540,13 +639,11 @@ footer {
         margin-right: auto;
     }
 
+
     .signup-form button {
         min-height: 52px;
     }
 
-    .join-art img {
-        max-width: 340px;
-    }
 }
 
 </style>
@@ -565,23 +662,32 @@ footer {
 
 <div class="hero-overlay"></div>
 
+
 <div class="hero-content">
 
+
 <h1>
+
 MONSTER CLUB<br>
+
 <span class="supply-co">SUPPLY CO.</span>
+
 </h1>
 
+
 <div class="tagline">
+
 SUPPLIES FOR THE STRANGE SINCE 1984
+
 </div>
 
 
 <div class="hero-actions">
 
+
 <a
 href="#join"
-class="button"
+class="button join-button"
 >
 JOIN THE CLUB
 </a>
@@ -596,10 +702,12 @@ rel="noopener noreferrer"
 SHOP
 </a>
 
+
 </div>
 
 
 <div class="podcast-links">
+
 
 <a
 class="spotify"
@@ -620,9 +728,12 @@ rel="noopener noreferrer"
 APPLE PODCASTS
 </a>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
 
@@ -632,188 +743,343 @@ APPLE PODCASTS
      EPISODE ARCHIVE
      ========================= -->
 
-<section class="section" id="archive">
+<section
+class="section"
+id="archive"
+>
 
-<h2>EPISODE ARCHIVE</h2>
+
+<h2>
+EPISODE ARCHIVE
+</h2>
+
 
 <div class="monster-grid">
 
 
 <div class="card">
+
 <h3>Dead Air Radio</h3>
+
 <p>
 A midnight broadcast proves some signals are never truly empty.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>Tally Green Swamp Monster</h3>
+
+<h3>
+Tally Green Swamp Monster
+</h3>
+
 <p>
 Two siblings venture deep into a swamp where something still waits in the dark.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Visitors From the Sky</h3>
+
+<h3>
+The Visitors From the Sky
+</h3>
+
 <p>
 A metallic craft lands near Blackridge — but the visitors never actually leave.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Creature of Willow Point</h3>
+
+<h3>
+The Creature of Willow Point
+</h3>
+
 <p>
 Strange knocks echo from the woods until something answers back.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>Monster Case File: Frizzle</h3>
+
+<h3>
+Monster Case File: Frizzle
+</h3>
+
 <p>
 Walter’s first monster encounter sparks the creation of Monster Club.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>Static Channel 13</h3>
+
+<h3>
+Static Channel 13
+</h3>
+
 <p>
 A forgotten television signal slowly lets something into our world.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Red Eyes of Forest Brook</h3>
+
+<h3>
+The Red Eyes of Forest Brook
+</h3>
+
 <p>
 A winged figure with glowing red eyes appears before disaster strikes.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Well</h3>
+
+<h3>
+The Well
+</h3>
+
 <p>
 A hidden tunnel beneath an old house leads to something buried alive.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Creep Cruiser</h3>
+
+<h3>
+The Creep Cruiser
+</h3>
+
 <p>
 A ghostly BMX bike appears at night — and kids who follow it disappear.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Whoops in the Hollow</h3>
+
+<h3>
+The Whoops in the Hollow
+</h3>
+
 <p>
 Bigfoot calls echo through the woods after two friends answer back.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Shadow of Black Water Lake</h3>
+
+<h3>
+The Shadow of Black Water Lake
+</h3>
+
 <p>
 A quiet lake hides a terrifying secret beneath its dark surface.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Full Moon Creature</h3>
+
+<h3>
+The Full Moon Creature
+</h3>
+
 <p>
 Walter witnesses a horrifying transformation under the Roswell moon.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Haunted School Bus</h3>
+
+<h3>
+The Haunted School Bus
+</h3>
+
 <p>
 A final ride home from school turns into something far more sinister.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Haunted Telephone</h3>
+
+<h3>
+The Haunted Telephone
+</h3>
+
 <p>
 Phone calls from inside the house lure a boy toward an impossible visitor.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>Monster Case File #2: Flatwoods Monster</h3>
+
+<h3>
+Monster Case File #2: Flatwoods Monster
+</h3>
+
 <p>
 Walter and Frizzle investigate a legendary creature deep in the swamp.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Ice Cream Man</h3>
+
+<h3>
+The Ice Cream Man
+</h3>
+
 <p>
 A mysterious truck returns with a menu no child should ever order from.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Monster of Sea Pines</h3>
+
+<h3>
+The Monster of Sea Pines
+</h3>
+
 <p>
 A marsh-dwelling creature resurfaces after decades of disappearances.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Roswell Nightcrawler</h3>
+
+<h3>
+The Roswell Nightcrawler
+</h3>
+
 <p>
-Walter and Frizzle investigate eerie sightings along the Chattahoochee River,
-only to discover a terrifying creature—and a government secret—lurking deep
-within the Preserve.
+Walter and Frizzle investigate eerie sightings along the Chattahoochee River, only to discover a terrifying creature—and a government secret—lurking deep within the Preserve.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 <div class="card">
-<h3>The Thing From the Drain</h3>
+
+<h3>
+The Thing From the Drain
+</h3>
+
 <p>
-In the Season One Finale, Grant returns to the neighborhood pool after dark
-and uncovers a terrifying secret that has remained hidden for years.
+In the Season One Finale, Grant returns to the neighborhood pool after dark and uncovers a terrifying secret that has remained hidden for years.
 </p>
-<a href="#">OPEN FILE →</a>
+
+<a href="#">
+OPEN FILE →
+</a>
+
 </div>
 
 
 </div>
+
 
 </section>
 
@@ -823,20 +1089,27 @@ and uncovers a terrifying secret that has remained hidden for years.
      JOIN THE CLUB
      ========================= -->
 
-<section class="join" id="join">
+<section
+class="join"
+id="join"
+>
+
 
 <div class="join-wrap">
 
 
 <div class="join-inner">
 
+
 <div class="join-kicker">
 MONSTER CLUB MEMBERSHIP
 </div>
 
+
 <h2>
 JOIN THE CLUB
 </h2>
+
 
 <p>
 Be the first to hear about new Monster Club stories,
@@ -850,6 +1123,7 @@ class="signup-form"
 onsubmit="event.preventDefault(); alert('Welcome to the Monster Club!');"
 >
 
+
 <input
 type="email"
 placeholder="ENTER YOUR EMAIL"
@@ -857,9 +1131,11 @@ aria-label="Email address"
 required
 >
 
+
 <button type="submit">
 JOIN NOW
 </button>
+
 
 </form>
 
@@ -868,20 +1144,12 @@ JOIN NOW
 SUPPLIES FOR THE STRANGE SINCE 1984
 </div>
 
-</div>
-
-
-<div class="join-art">
-
-<img
-src="monster-club-logo.png"
-alt="Monster Club Supply Co. logo"
->
 
 </div>
 
 
 </div>
+
 
 </section>
 
@@ -897,4 +1165,5 @@ Monster Club Supply Co. © 2026
 
 
 </body>
+
 </html>
