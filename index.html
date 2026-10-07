@@ -1,353 +1,1290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monster Club Supply Co.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: #050505;
-      color: white;
-      font-family: 'Inter', Arial, sans-serif;
-      overflow-x: hidden;
-    }
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background:
-        linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.76)),
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Monster Club Supply Co.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap"
+rel="stylesheet"
+>
+
+<style>
+
+/* =========================
+   GENERAL
+   ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #050505;
+    color: white;
+    font-family: 'Inter', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.76)
+        ),
+
         url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=85&w=2000");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background: linear-gradient(to bottom, rgba(24,5,43,.20), rgba(24,5,43,.35) 45%, rgba(5,5,5,.82));
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0 20px;
-    }
-    h1 {
-      font-family: 'Anton', Impact, sans-serif;
-      font-size: clamp(4rem, 8vw, 7.4rem);
-      line-height: .92;
-      margin: 0;
-      color: #ff6a00;
-      text-shadow: 0 0 2px #ff6a00, 0 0 10px rgba(255,106,0,.28), 0 5px 25px rgba(0,0,0,.9);
-    }
-    .tagline {
-      margin-top: 20px;
-      font-size: clamp(.9rem, 2vw, 1.2rem);
-      letter-spacing: 2px;
-      color: #9dff00;
-      text-shadow: 0 2px 10px #000;
-    }
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.05) 0%,
+            rgba(0,0,0,.12) 42%,
+            rgba(0,0,0,.48) 78%,
+            rgba(0,0,0,.78) 100%
+        );
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+
+/* =========================
+   MAIN TITLE
+   ========================= */
+
+h1 {
+
+    font-family: 'Anton', Impact, sans-serif;
+
+    font-size: clamp(4rem,8vw,7.4rem);
+
+    line-height: .92;
+
+    margin: 0;
+
+    color: #ff6a00;
+
+    text-shadow:
+        0 0 2px #ff6a00,
+        0 0 10px rgba(255,106,0,.28),
+        0 5px 25px rgba(0,0,0,.9);
+}
+
+
+/* =========================
+   TAGLINE
+   ========================= */
+
+.tagline {
+
+    margin-top: 20px;
+
+    font-size: clamp(.9rem,2vw,1.2rem);
+
+    letter-spacing: 2px;
+
+    color: #9dff00;
+
+    text-shadow: 0 2px 10px #000;
+}
+
+
+/* =========================
+   HERO ACTION BUTTONS
+   ========================= */
+
+.hero-actions {
+    margin-top: 38px;
+    display: inline-flex;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(5,5,5,.62);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    box-shadow: 0 14px 35px rgba(0,0,0,.28);
+}
+
+.button {
+    min-width: 220px;
+    padding: 17px 26px;
+    border-radius: 6px;
+    border: 2px solid #ff6a00;
+    background: #ff6a00;
+    color: #050505;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Anton', Impact, sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.8px;
+    line-height: 1;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255,106,0,.32);
+}
+
+.shop-button {
+    background: #9dff00;
+    border-color: #9dff00;
+    color: #050505;
+}
+
+.shop-button:hover {
+    box-shadow: 0 0 20px rgba(157,255,0,.32);
+}
+
+.button-arrow {
+    margin-left: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+
+/* =========================
+   PODCAST LINKS
+   ========================= */
+
+.podcast-links {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+
+.podcast-links a {
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    transition: .2s;
+
+    text-shadow: 0 2px 8px #000;
+}
+
+
+.spotify {
+    color: #ff6a00;
+}
+
+
+.apple {
+    color: #9dff00;
+}
+
+
+.podcast-links a:hover {
+    opacity: .7;
+}
+
+
+/* =========================
+   EPISODE ARCHIVE
+   ========================= */
+
+.section {
+
+    padding: 100px 20px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+.section h2 {
+
+    font-family: 'Anton', Impact, sans-serif;
+
+    font-size: 3rem;
+
+    color: #ff6a00;
+
+    margin-bottom: 40px;
+}
+
+
+.monster-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 20px;
+}
+
+
+.card {
+
+    background: #111;
+
+    border: 1px solid #222;
+
+    padding: 25px;
+
+    transition: .3s;
+}
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #9dff00;
+}
+
+
+.card h3 {
+
+    color: #9dff00;
+
+    margin-top: 0;
+}
+
+
+.card p {
+
+    line-height: 1.6;
+}
+
+
+.card a {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #ff6a00;
+
+    text-decoration: none;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   JOIN THE CLUB
+   ========================= */
+
+.join {
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(156,255,0,.10),
+            transparent 35%
+        ),
+        #6e24a8;
+
+    padding: 90px 20px;
+}
+
+
+.join-wrap {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1.15fr)
+        minmax(280px,.85fr);
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+
+.join-inner {
+
+    text-align: left;
+}
+
+
+.join-kicker {
+
+    color: #9dff00;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+
+.join h2 {
+
+    font-family: 'Anton', Impact, sans-serif;
+
+    font-size: clamp(3.6rem,8vw,6rem);
+
+    line-height: .95;
+
+    margin: 0;
+
+    color: white;
+
+    text-transform: uppercase;
+}
+
+
+.join p {
+
+    max-width: 590px;
+
+    margin: 22px 0 32px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.92);
+}
+
+
+/* =========================
+   EMAIL FORM
+   ========================= */
+
+.signup-form {
+
+    display: flex;
+
+    max-width: 560px;
+
+    margin: 0;
+}
+
+
+.signup-form input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    border: 0;
+
+    outline: none;
+
+    padding: 17px 18px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+
+.signup-form button {
+
+    border: 0;
+
+    background: #9dff00;
+
+    color: #050505;
+
+    padding: 0 25px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+
+.signup-form button:hover {
+
+    opacity: .88;
+}
+
+
+.join-note {
+
+    margin-top: 15px;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   JOIN LOGO
+   ========================= */
+
+.join-art {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.join-art img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    height: auto;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    border-top: 1px solid #222;
+
+    color: #777;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media(max-width:768px) {
+
     .hero-actions {
-      margin-top: 38px;
-      display: inline-flex;
-      gap: 8px;
-      padding: 8px;
-      border: 2px solid #8d35d1;
-      background: rgba(25,5,43,.82);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-radius: 10px;
-      box-shadow: 0 0 24px rgba(141,53,209,.32);
-    }
-    .button {
-      box-sizing: border-box;
-      min-width: 240px;
-      padding: 17px 26px;
-      border-radius: 6px;
-      border: 2px solid #a84cff;
-      background: #ff6a00;
-      color: #050505;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-family: 'Anton', Impact, sans-serif;
-      font-size: 20px;
-      letter-spacing: 1.8px;
-      line-height: 1;
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 20px rgba(255,106,0,.32);
-    }
-    .shop-button {
-      background: #9dff00;
-      color: #050505;
-    }
-    .shop-button:hover { box-shadow: 0 0 20px rgba(157,255,0,.32); }
-    .button-arrow {
-      margin-left: 8px;
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-    }
-    .podcast-links {
-      margin-top: 25px;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .podcast-links a {
-      text-decoration: none;
-      font-size: 14px;
-      letter-spacing: 2px;
-      transition: opacity .2s;
-      text-shadow: 0 2px 8px #000;
-    }
-    .podcast-links a:hover { opacity: .7; }
-    .spotify { color: #ff6a00; }
-    .apple { color: #ca8bff; }
-    .section {
-      padding: 100px 20px;
-      max-width: 1100px;
-      margin: auto;
-      background: radial-gradient(circle at top right, rgba(110,36,168,.24), transparent 42%);
-    }
-    .section h2 {
-      font-family: 'Anton', Impact, sans-serif;
-      font-size: 3rem;
-      color: #ff6a00;
-      margin-bottom: 40px;
-      text-shadow: 0 0 18px rgba(141,53,209,.42);
-    }
-    .monster-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: linear-gradient(145deg, #1c0c29, #100d18 72%);
-      border: 1px solid #592578;
-      border-radius: 8px;
-      padding: 25px;
-      box-shadow: inset 0 1px 0 rgba(194,126,255,.10);
-      transition: transform .3s, border-color .3s, box-shadow .3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #a84cff;
-      box-shadow: 0 8px 25px rgba(110,36,168,.35);
-    }
-    .card h3 { color: #9dff00; margin-top: 0; }
-    .card p { line-height: 1.6; }
-    .card a {
-      display: inline-block;
-      margin-top: 15px;
-      color: #ff7900;
-      text-decoration: none;
-      letter-spacing: 2px;
-      font-size: 13px;
-    }
-    .join {
-      background: radial-gradient(circle at top left, rgba(156,255,0,.10), transparent 35%), #6e24a8;
-      padding: 90px 20px;
-    }
-    .join-wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0,1.15fr) minmax(280px,.85fr);
-      gap: 55px;
-      align-items: center;
-    }
-    .join-inner { text-align: left; }
-    .join-kicker {
-      color: #9dff00;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .join h2 {
-      font-family: 'Anton', Impact, sans-serif;
-      font-size: clamp(3.6rem, 8vw, 6rem);
-      line-height: .95;
-      margin: 0;
-      color: white;
-      text-transform: uppercase;
-    }
-    .join p {
-      max-width: 590px;
-      margin: 22px 0 32px;
-      line-height: 1.7;
-      color: rgba(255,255,255,.92);
-    }
-    .signup-form { display: flex; max-width: 560px; margin: 0; }
-    .signup-form input {
-      flex: 1;
-      min-width: 0;
-      border: 0;
-      outline: none;
-      padding: 17px 18px;
-      font-family: inherit;
-      font-size: 14px;
-    }
-    .signup-form button {
-      border: 0;
-      background: #9dff00;
-      color: #050505;
-      padding: 0 25px;
-      font-family: inherit;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-    .signup-form button:hover { opacity: .88; }
-    .join-note {
-      margin-top: 15px;
-      color: rgba(255,255,255,.65);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .join-art {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .join-art img { display: block; width: 100%; max-width: 430px; height: auto; }
-    footer {
-      text-align: center;
-      padding: 50px 20px;
-      background: #16091f;
-      border-top: 2px solid #6e24a8;
-      color: #777;
-    }
-    @media (max-width: 768px) {
-      .hero-actions {
         width: min(100%, 330px);
         flex-direction: column;
         gap: 14px;
-      }
-      .hero-actions .button { width: 100%; min-width: 0; }
-      .join-wrap { grid-template-columns: 1fr; gap: 40px; }
-      .join-inner { text-align: center; }
-      .join p { margin-left: auto; margin-right: auto; }
-      .signup-form {
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .join-wrap {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .join-inner {
+        text-align: center;
+    }
+
+    .join p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .signup-form {
         flex-direction: column;
         gap: 8px;
         margin-left: auto;
         margin-right: auto;
-      }
-      .signup-form button { min-height: 52px; }
-      .join-art img { max-width: 340px; }
     }
-  </style>
+
+    .signup-form button {
+        min-height: 52px;
+    }
+
+    .join-art img {
+        max-width: 340px;
+    }
+
+}
+
+
+/* Purple restored throughout the Monster Club design */
+
+.hero-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(24,5,43,.20),
+        rgba(24,5,43,.35) 45%,
+        rgba(5,5,5,.82)
+    );
+}
+
+.hero-actions {
+    border: 2px solid #8d35d1;
+    background: rgba(25,5,43,.82);
+    box-shadow: 0 0 24px rgba(141,53,209,.32);
+}
+
+.hero-actions .button {
+    box-sizing: border-box;
+    min-width: 240px;
+    border-color: #a84cff;
+}
+
+.hero-actions .shop-button {
+    border-color: #a84cff;
+}
+
+.podcast-links .apple {
+    color: #ca8bff;
+}
+
+.section {
+    background: radial-gradient(
+        circle at top right,
+        rgba(110,36,168,.24),
+        transparent 42%
+    );
+}
+
+.section h2 {
+    text-shadow: 0 0 18px rgba(141,53,209,.42);
+}
+
+.card {
+    background: linear-gradient(
+        145deg,
+        #1c0c29,
+        #100d18 72%
+    );
+
+    border: 1px solid #592578;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 0 rgba(194,126,255,.10);
+}
+
+.card:hover {
+    border-color: #a84cff;
+    box-shadow: 0 8px 25px rgba(110,36,168,.35);
+}
+
+.card h3 {
+    color: #9dff00;
+}
+
+.card a {
+    color: #ff7900;
+}
+
+footer {
+    background: #16091f;
+    border-top: 2px solid #6e24a8;
+}
+
+@media(max-width:768px) {
+
+    .hero-actions .button {
+        min-width: 0;
+    }
+
+}
+
+</style>
+
 </head>
 
+
 <body>
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>MONSTER CLUB<br>SUPPLY CO.</h1>
-      <div class="tagline">SUPPLIES FOR THE STRANGE SINCE 1984</div>
 
-      <div class="hero-actions">
-        <a href="#join" class="button">JOIN THE CLUB <span class="button-arrow">→</span></a>
-        <a href="https://www.etsy.com/shop/MonsterClubSupplyCo" class="button shop-button" target="_blank" rel="noopener noreferrer">SHOP SUPPLIES <span class="button-arrow">→</span></a>
-      </div>
 
-      <div class="podcast-links">
-        <a class="spotify" href="https://open.spotify.com/show/1SEI8DrQvsyJnQnbUpvCto?si=4b3da63db0144052" target="_blank" rel="noopener noreferrer">LISTEN ON SPOTIFY</a>
-        <a class="apple" href="https://podcasts.apple.com/us/podcast/the-monster-club-supply-co-podcast/id1896632263" target="_blank" rel="noopener noreferrer">APPLE PODCASTS</a>
-      </div>
-    </div>
-  </section>
+<!-- =========================
+     HERO
+     ========================= -->
 
-  <section class="section" id="archive">
-    <h2>EPISODE ARCHIVE</h2>
-    <h2 style="font-size:2rem; margin-top:0; margin-bottom:24px; color:#9dff00;">SEASON 2</h2>
+<section class="hero">
 
-    <div class="monster-grid" style="margin-bottom:70px;">
-      <div class="card">
-        <h3>The Storm</h3>
-        <p>During a violent storm, Ricky spots something impossible hiding in the clouds above his backyard.</p>
-        <a href="#">OPEN FILE →</a>
-      </div>
-      <div class="card">
-        <h3>The Grimsly</h3>
-        <p>A strange old camera found in a basement begins capturing something that should not be there.</p>
-        <a href="#">OPEN FILE →</a>
-      </div>
-      <div class="card">
-        <h3>The Ninth Player</h3>
-        <p>When Lawson discovers a new baseball team, he begins to notice something strange about the players taking the field.</p>
-        <a href="#">OPEN FILE →</a>
-      </div>
-    </div>
+<div class="hero-overlay"></div>
 
-    <h2 style="font-size:2rem; margin-bottom:24px;">SEASON 1</h2>
-    <div class="monster-grid">
-      <div class="card"><h3>Dead Air Radio</h3><p>A midnight broadcast proves some signals are never truly empty.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>Tally Green Swamp Monster</h3><p>Two siblings venture deep into a swamp where something still waits in the dark.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Visitors From the Sky</h3><p>A metallic craft lands near Blackridge — but the visitors never actually leave.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Creature of Willow Point</h3><p>Strange knocks echo from the woods until something answers back.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>Monster Case File: Frizzle</h3><p>Walter’s first monster encounter sparks the creation of Monster Club.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>Static Channel 13</h3><p>A forgotten television signal slowly lets something into our world.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Red Eyes of Forest Brook</h3><p>A winged figure with glowing red eyes appears before disaster strikes.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Well</h3><p>A hidden tunnel beneath an old house leads to something buried alive.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Creep Cruiser</h3><p>A ghostly BMX bike appears at night — and kids who follow it disappear.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Whoops in the Hollow</h3><p>Bigfoot calls echo through the woods after two friends answer back.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Shadow of Black Water Lake</h3><p>A quiet lake hides a terrifying secret beneath its dark surface.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Full Moon Creature</h3><p>Walter witnesses a horrifying transformation under the Roswell moon.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Haunted School Bus</h3><p>A final ride home from school turns into something far more sinister.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Haunted Telephone</h3><p>Phone calls from inside the house lure a boy toward an impossible visitor.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>Monster Case File #2: Flatwoods Monster</h3><p>Walter and Frizzle investigate a legendary creature deep in the swamp.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Ice Cream Man</h3><p>A mysterious truck returns with a menu no child should ever order from.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Monster of Sea Pines</h3><p>A marsh-dwelling creature resurfaces after decades of disappearances.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Roswell Nightcrawler</h3><p>Walter and Frizzle investigate eerie sightings along the Chattahoochee River, only to discover a terrifying creature—and a government secret—lurking deep within the Preserve.</p><a href="#">OPEN FILE →</a></div>
-      <div class="card"><h3>The Thing From the Drain</h3><p>In the Season One Finale, Grant returns to the neighborhood pool after dark and uncovers a terrifying secret that has remained hidden for years.</p><a href="#">OPEN FILE →</a></div>
-    </div>
-  </section>
+<div class="hero-content">
 
-  <section class="join" id="join">
-    <div class="join-wrap">
-      <div class="join-inner">
-        <div class="join-kicker">MONSTER CLUB MEMBERSHIP</div>
-        <h2>JOIN THE CLUB</h2>
-        <p>Be the first to hear about new Monster Club stories, strange sightings, shop updates, and new supplies for monster hunters.</p>
-        <form class="signup-form" onsubmit="event.preventDefault(); alert('Welcome to the Monster Club!');">
-          <input type="email" placeholder="ENTER YOUR EMAIL" aria-label="Email address" required>
-          <button type="submit">JOIN NOW</button>
-        </form>
-        <div class="join-note">SUPPLIES FOR THE STRANGE SINCE 1984</div>
-      </div>
+<h1>
+MONSTER CLUB<br>
+SUPPLY CO.
+</h1>
 
-      <div class="join-art">
-        <img
-          src="data:image/webp;base64,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"
-          alt="Monster Club Supply Co. logo"
-        >
-      </div>
-    </div>
-  </section>
+<div class="tagline">
+SUPPLIES FOR THE STRANGE SINCE 1984
+</div>
 
-  <footer>Monster Club Supply Co. © 2026</footer>
+<div class="hero-actions">
+
+<a href="#join" class="button">
+JOIN THE CLUB <span class="button-arrow">→</span>
+</a>
+
+<a
+href="https://www.etsy.com/shop/MonsterClubSupplyCo"
+class="button shop-button"
+target="_blank"
+rel="noopener noreferrer"
+>
+SHOP SUPPLIES <span class="button-arrow">→</span>
+</a>
+
+</div>
+
+
+<div class="podcast-links">
+
+<a
+class="spotify"
+href="https://open.spotify.com/show/1SEI8DrQvsyJnQnbUpvCto?si=4b3da63db0144052"
+target="_blank"
+rel="noopener noreferrer"
+>
+LISTEN ON SPOTIFY
+</a>
+
+<a
+class="apple"
+href="https://podcasts.apple.com/us/podcast/the-monster-club-supply-co-podcast/id1896632263"
+target="_blank"
+rel="noopener noreferrer"
+>
+APPLE PODCASTS
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     EPISODE ARCHIVE
+     ========================= -->
+
+<section
+class="section"
+id="archive"
+>
+
+<h2>
+EPISODE ARCHIVE
+</h2>
+
+
+<h2
+style="
+font-size:2rem;
+margin-top:0;
+margin-bottom:24px;
+color:#9dff00;
+"
+>
+SEASON 2
+</h2>
+
+
+<div
+class="monster-grid"
+style="margin-bottom:70px;"
+>
+
+
+<div class="card">
+
+<h3>The Storm</h3>
+
+<p>
+During a violent storm, Ricky spots something impossible hiding in the clouds above his backyard.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>The Grimsly</h3>
+
+<p>
+A strange old camera found in a basement begins capturing something that should not be there.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>The Ninth Player</h3>
+
+<p>
+When Lawson discovers a new baseball team, he begins to notice something strange about the players taking the field.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+<!-- NEW EPISODE -->
+
+<div class="card">
+
+<h3>The Last Trick R' Treater</h3>
+
+<p>
+Kate thought she had outgrown Halloween—until one final trick-or-treater arrives at her door long after the other costumes have disappeared.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<h2
+style="
+font-size:2rem;
+margin-bottom:24px;
+"
+>
+SEASON 1
+</h2>
+
+
+<div class="monster-grid">
+
+
+<div class="card">
+
+<h3>Dead Air Radio</h3>
+
+<p>
+A midnight broadcast proves some signals are never truly empty.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Tally Green Swamp Monster
+</h3>
+
+<p>
+Two siblings venture deep into a swamp where something still waits in the dark.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Visitors From the Sky
+</h3>
+
+<p>
+A metallic craft lands near Blackridge — but the visitors never actually leave.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Creature of Willow Point
+</h3>
+
+<p>
+Strange knocks echo from the woods until something answers back.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Monster Case File: Frizzle
+</h3>
+
+<p>
+Walter’s first monster encounter sparks the creation of Monster Club.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Static Channel 13
+</h3>
+
+<p>
+A forgotten television signal slowly lets something into our world.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Red Eyes of Forest Brook
+</h3>
+
+<p>
+A winged figure with glowing red eyes appears before disaster strikes.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Well
+</h3>
+
+<p>
+A hidden tunnel beneath an old house leads to something buried alive.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Creep Cruiser
+</h3>
+
+<p>
+A ghostly BMX bike appears at night — and kids who follow it disappear.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Whoops in the Hollow
+</h3>
+
+<p>
+Bigfoot calls echo through the woods after two friends answer back.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Shadow of Black Water Lake
+</h3>
+
+<p>
+A quiet lake hides a terrifying secret beneath its dark surface.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Full Moon Creature
+</h3>
+
+<p>
+Walter witnesses a horrifying transformation under the Roswell moon.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Haunted School Bus
+</h3>
+
+<p>
+A final ride home from school turns into something far more sinister.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Haunted Telephone
+</h3>
+
+<p>
+Phone calls from inside the house lure a boy toward an impossible visitor.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Monster Case File #2: Flatwoods Monster
+</h3>
+
+<p>
+Walter and Frizzle investigate a legendary creature deep in the swamp.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Ice Cream Man
+</h3>
+
+<p>
+A mysterious truck returns with a menu no child should ever order from.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Monster of Sea Pines
+</h3>
+
+<p>
+A marsh-dwelling creature resurfaces after decades of disappearances.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Roswell Nightcrawler
+</h3>
+
+<p>
+Walter and Frizzle investigate eerie sightings along the Chattahoochee River, only to discover a terrifying creature—and a government secret—lurking deep within the Preserve.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+The Thing From the Drain
+</h3>
+
+<p>
+In the Season One Finale, Grant returns to the neighborhood pool after dark and uncovers a terrifying secret that has remained hidden for years.
+</p>
+
+<a href="#">
+OPEN FILE →
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     JOIN THE CLUB
+     ========================= -->
+
+<section
+class="join"
+id="join"
+>
+
+<div class="join-wrap">
+
+
+<div class="join-inner">
+
+<div class="join-kicker">
+MONSTER CLUB MEMBERSHIP
+</div>
+
+<h2>
+JOIN THE CLUB
+</h2>
+
+<p>
+Be the first to hear about new Monster Club stories,
+strange sightings, shop updates, and new supplies
+for monster hunters.
+</p>
+
+
+<form
+class="signup-form"
+onsubmit="
+event.preventDefault();
+alert('Welcome to the Monster Club!');
+"
+>
+
+<input
+type="email"
+placeholder="ENTER YOUR EMAIL"
+aria-label="Email address"
+required
+>
+
+<button type="submit">
+JOIN NOW
+</button>
+
+</form>
+
+
+<div class="join-note">
+SUPPLIES FOR THE STRANGE SINCE 1984
+</div>
+
+</div>
+
+
+
+<!-- RIGHT SIDE LOGO -->
+
+<div class="join-art">
+
+<img
+src="data:image/webp;base64,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"
+alt="Monster Club Supply Co. logo"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer>
+Monster Club Supply Co. © 2026
+</footer>
+
+
 </body>
+
 </html>
